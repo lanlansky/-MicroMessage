@@ -28,13 +28,11 @@
     <result column="remark" jdbcType="VARCHAR" property="remark"/>
     <result column="bankId" jdbcType="VARCHAR" property="bankId"/>
     <result column="count(seq)" jdbcType="INTEGER" property="num1"/>
-    <result column="count(bankId)" jdbcType="INTEGER" property="num2"/>
-    <result column="count(toudiAccount)" jdbcType="INTEGER" property="num3"/>
   </resultMap>
 
   <select id="queryAllInfoList"  resultMap="AllInfoResult">
-    SELECT `user`.address,`user`.remark,bankId,count(seq),count(bankId),count(toudiAccount)
-	FROM bankdata,user where toudiAccount=`user`.account GROUP BY bankid
+    SELECT `user`.address,`user`.remark,bankId,count(seq)
+	FROM bankdata,user where toudiAccount=`user`.account GROUP BY bankid,remark
   </select>
   
 </mapper>

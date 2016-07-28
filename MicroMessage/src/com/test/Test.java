@@ -12,8 +12,8 @@ public class Test {
 		AllInfoService service=new AllInfoService();
 		List<AllInfo> infos=service.queryAllInfoList();
 		for(AllInfo info:infos){
-			System.out.println("得到的数据是:"+info.getAddress()+"  "+info.getRemark()+"  "
-					+info.getBankId()+"  "+info.getNum1()+" "+info.getNum2()+"  "+info.getNum3());
+			System.out.println("得到的数据是:"+info.getAddress()+"      "+info.getRemark()+"        "
+					+info.getBankId()+"       "+info.getNum1());
 		}
 
 	}
